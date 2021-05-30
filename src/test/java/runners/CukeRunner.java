@@ -9,15 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         features = "src/test/resources/features",
-        glue = "stepDefs",
-        stepNotifications = true,
-        plugin = {"summary",
-                "pretty",
-                "html:target/html-report.html",
-                "json:target/Cucumber.json",
-                "rerun:target/failed-scenarios.txt"
-        }
-
+        glue = "stepDefs"
+       // dryRun = true
 
 )
 
