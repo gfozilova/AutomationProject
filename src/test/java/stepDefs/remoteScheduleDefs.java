@@ -46,7 +46,11 @@ public class remoteScheduleDefs {
         remoteSchedulePages remNot = new remoteSchedulePages();
         remNot.Remote.click();
     }
-
+    @When("The user clicks on Schedule")
+    public void Schedule() {
+        remoteSchedulePages schedule = new remoteSchedulePages();
+        schedule.schudele.click();
+    }
 
 
     @Then("The page contains Order Info")
@@ -55,11 +59,7 @@ public class remoteScheduleDefs {
         Assert.assertTrue(actual.equals("Order Info"));
     }
 // 3.scenarios
-@When("The user clicks on Schedule")
-public void Schedule() {
-    remoteSchedulePages schedule = new remoteSchedulePages();
-    schedule.schudele.click();
-}
+
     @When("The user click on the Enter title of the document")
     public void title_of_the_document() {
         String doc = "Driver Licence";
