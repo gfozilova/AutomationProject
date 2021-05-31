@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
+    // run before and after each scenarios
     @Before
     public void setupScenario(){
         Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
