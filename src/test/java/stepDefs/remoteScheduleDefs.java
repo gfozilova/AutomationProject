@@ -20,8 +20,8 @@ public class remoteScheduleDefs {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
 
-    @When("clicks on the button {string}")
-    public void clicks_on_the_button(String string) {
+    @When("clicks on the button ")
+    public void clicks_on_the_button() {
         remoteSchedulePages acceptbutton = new remoteSchedulePages();
         acceptbutton.Accept.click();
     }
@@ -47,11 +47,7 @@ public class remoteScheduleDefs {
         remNot.Remote.click();
     }
 
-    @When("The user clicks on Schedule")
-    public void Schedule() {
-        remoteSchedulePages schedule = new remoteSchedulePages();
-        schedule.schudele.click();
-    }
+
 
     @Then("The page contains Order Info")
     public void Order_Info() {
@@ -59,6 +55,11 @@ public class remoteScheduleDefs {
         Assert.assertTrue(actual.equals("Order Info"));
     }
 // 3.scenarios
+@When("The user clicks on Schedule")
+public void Schedule() {
+    remoteSchedulePages schedule = new remoteSchedulePages();
+    schedule.schudele.click();
+}
     @When("The user click on the Enter title of the document")
     public void title_of_the_document() {
         String doc = "Driver Licence";
@@ -70,7 +71,7 @@ public class remoteScheduleDefs {
     @When("The user click on the Increase number of documents to be notarized")
     public void number_of_documentincrease() {
         remoteSchedulePages numberOfdocument = new remoteSchedulePages();
-        int x = 1;
+        int x = 2;
         for (int i = 0; i < x; i++) {
             numberOfdocument.increase.click();
         }
