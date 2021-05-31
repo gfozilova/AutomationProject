@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepDefs", // package name
-        //tags = "@ek",
+        tags = "@SignUP_real",
         dryRun = true,
         stepNotifications = true,
         plugin = {"summary",  // generates  a detailed report after each run and also generates snippets for unimplemented steps
