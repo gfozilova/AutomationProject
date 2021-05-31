@@ -10,14 +10,15 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
    //    tags = "temp",
         features = "src/test/resources/features",
-        glue = "stepDefs"
-      //  ,dryRun = true
+        glue = "stepDefs",
+       // dryRun = true,
       //  stepNotifications = true,
-//       //  plugin = {"summary",
-//        "pretty",
-//        "html:target/html-report.html",
-//        "json:target/Cucumber.json",
+        plugin = { "summary",
+                   "pretty",
+                   "html:target/html-report.html",
+                   "json:target/Cucumber.json"
 //        "rerun:target/failed-scenarios.txt"
+        }
 )
 public class CukeRunnerSchedule {
 

@@ -19,11 +19,15 @@ public class remoteSchedulePages {
 
     @FindBy(xpath = "//h1[text()='Notarize documents online or in person at your convenient time and location']")
     public WebElement mainPage;
+//
+//    @FindBy(xpath = "//div[@style='background: url(\"/assets/img/traveling-notarization.png\") center center no-repeat;']")
+//    public WebElement  schudele;
 
-    @FindBy(xpath = "//div[@style='background: url(\"/assets/img/traveling-notarization.png\") center center no-repeat;']")
-    public WebElement  schudele;
 
-    @FindBy(id = "titleDoc")
+    @FindBy(xpath = "//*[@id=\"root\"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div[2]")
+    public WebElement schudele;
+
+    @FindBy(xpath = "//input[@id= 'titleDoc']")
     public WebElement titleDoc;
 
     @FindBy(xpath = "//i[@class= 'fas fa-plus']")

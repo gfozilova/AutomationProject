@@ -45,7 +45,7 @@ public class remoteStepDefs {
     public void the_page_contains(String string) {
 
         String actual = Driver.getDriver().findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/div[2]/div[1]/div[1]/div[1]/div[2]")).getText();
-        Assert.assertTrue(actual.equals("Order Info"));
+        Assert.assertEquals(actual,"Order Info");
 
     }
 
